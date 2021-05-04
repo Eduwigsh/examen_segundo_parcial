@@ -18,10 +18,9 @@
     ResultSet rs=null;
     
     
-    String url="jdbc:mysql://localhost/Helados";
-    
-    String userName="root";
-    String password="f0rmajuerrera";
+    String url="jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_164a81f9404682a";
+    String userName="bf098ddf661450";
+    String password="a90cec1d";
     
     try{
         Class.forName("com.mysql.jdbc.Driver");

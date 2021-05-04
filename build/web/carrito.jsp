@@ -25,10 +25,10 @@
     
     
      String url, userName, password, driver;
-    url="jdbc:mysql://localhost/Helados";
+    url="jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_164a81f9404682a";
     
-     userName="root";
-     password="f0rmajuerrera";
+     userName="bf098ddf661450";
+     password="a90cec1d";
      driver = "com.mysql.jdbc.Driver";
     
     try{
