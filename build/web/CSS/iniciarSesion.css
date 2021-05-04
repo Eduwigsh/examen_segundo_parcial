@@ -1,0 +1,46 @@
+@media  (min-width:720px) and (max-width:1080px){
+  
+
+    body{
+      }
+    }
+    @media  (min-height:720px) and (max-height:1950px){
+      
+    
+    body{
+        background-color: rgb(135, 135, 135);
+        }
+      }
+
+body{
+    margin: 0;
+}
+.main-container{
+    background-color: rgb(135, 135, 135);
+    height: auto;
+}
+
+nav#encabezado{
+    background-color: rgb(10,96,130);
+    padding-left: 37px;
+    padding-top: 38px;
+    display: inline-block;
+    padding-bottom: 38px;
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 2%;
+    color: rgb(213,37,47);
+    height: 50%;
+    margin-bottom: 30rem;
+    border-radius: 20px;
+    
+}
+#perfil{
+    width: 120px;
+}
+#formulario{
+    padding: 2%;
+}
+label, h1,input {
+    margin: 1.5%;
+}
