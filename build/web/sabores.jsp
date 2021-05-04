@@ -16,7 +16,7 @@
      Connection con=null;
      Statement set=null;
     ResultSet rs=null;
-    
+    String q;
     
     String url="jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_164a81f9404682a";
     String userName="bf098ddf661450";
@@ -75,7 +75,14 @@
                <img src="./IMG/Kawasaki.jpg" id="KawasakiIMG" style="height: 6rem;
                width: 6rem;" >
             <td>
-                $30 x litro
+                 <%q = "select cos_sab from sabores where id_sab=1";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                   <% } %>
             </td>
             <td>
             
@@ -91,7 +98,14 @@
                 <img src="./IMG/Kriko and Krisp.jpg" id="KrikoKrispIMG">
             </td>
             <td>
-                $45 x litro
+                <%  q = "select cos_sab from sabores where id_sab=2";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                 
@@ -108,7 +122,14 @@
                 <img src="./IMG/ReyJulion.jpg" id="ReyJulionIMG">
             </td>
             <td>
-                $40 x litro
+                <%  q = "select cos_sab from sabores where id_sab=3";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                 
@@ -124,7 +145,14 @@
                 <img src="./IMG/Panza.jpg"  id="PanzaIMG">
             </td>
             <td>
-                 $100 x litro
+                                 <%  q = "select cos_sab from sabores where id_sab=4";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
               
@@ -139,7 +167,14 @@
                 <img src="./IMG/TamalVerde.jpg" id="TamalVerdeIMG">
             </td>
             <td>
-                $69 x litro
+                              <%  q = "select cos_sab from sabores where id_sab=5";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>  $69 x litro
             </td>
             <td>
             
@@ -156,7 +191,14 @@
                 <img src="./IMG/ElotesConHartaMayonesayChiledelquenoPica.jpg" id="ElotesIMG">
             </td>
             <td>
-                $10,000 x litro
+                               <%  q = "select cos_sab from sabores where id_sab=12";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
               
@@ -173,7 +215,14 @@
                 <img src="./IMG/AmarilloAmarilloPlatano.jpg" id="AmarilloPlatanoIMG">
             </td>
             <td>
-                $420 x litro
+                                <%  q = "select cos_sab from sabores where id_sab=6";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>ro
             </td>
             <td>
             
@@ -188,7 +237,14 @@
                 <img src="./IMG/Moris&Cago.jpg" id="MorisIMG">
             </td>
             <td>
-                 $2 x litro
+                                 <%  q = "select cos_sab from sabores where id_sab=7";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
               
@@ -204,7 +260,14 @@
                 <img src="./IMG/StripperbutChocolate.jpg" id="StripperChocolateIMG">
             </td>
             <td>
-                $20 x litro
+                                <%  q = "select cos_sab from sabores where id_sab=8";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                  
@@ -220,7 +283,14 @@
                 <img src="./IMG/Striiper.jpg" id="StriiperIMG">
             </td>
             <td>
-                $38 x litro
+                              <%  q = "select cos_sab from sabores where id_sab=9";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                        
@@ -236,7 +306,14 @@
                 <img src="./IMG/EnchiladaVerde.jpg" id="EnchiladaVerdeIMG">
             </td>
             <td>
-                $9999 x litro
+                               <%  q = "select cos_sab from sabores where id_sab=10";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                  
@@ -252,7 +329,14 @@
                 <img src="./IMG/TacosdeBuche.jpg" id="TacosBucheIMG">
             </td>
             <td>
-                $40320 x litro
+                                <%  q = "select cos_sab from sabores where id_sab=11";
+                     
+                            set = con.createStatement();
+                            rs = set.executeQuery(q);
+                            while(rs.next()){%>
+                            <%=Integer.parseInt(rs.getString("cos_sab"))
+                                   %> x litro
+                                    <% } %>
             </td>
             <td>
                       

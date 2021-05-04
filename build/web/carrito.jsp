@@ -210,7 +210,7 @@
             <%=Criko_and_Crysp_value=Criko_and_Crysp_cos*Criko_and_Crysp %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+     <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -268,7 +268,7 @@
             <%=Rey_Julion_value=Rey_Julion_cos*Panza %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+        <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
          </tr>
@@ -326,8 +326,8 @@
             <%=Panza_value=Panza_cos*Panza %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
-           <input type="button" class="borrar" value="Eliminar" />
+        <td class="">
+          <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
            <% }   %>
@@ -382,7 +382,7 @@
             <%=Tamal_verde_value=Tamal_verde_cos*Tamal_verde %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+        <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -438,7 +438,7 @@
             <%=Elotes_con_arta_mayonesa_y_chile_del_que_no_pica_value=Elotes_con_arta_mayonesa_y_chile_del_que_no_pica_cos*Elotes_con_arta_mayonesa_y_chile_del_que_no_pica %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+       <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -449,7 +449,7 @@
             
                %>
         <td class="">
-            <img src="IMG/AmarilloAmarilloPlatano.jpg" class="lista">
+           <img src="IMG/AmarilloAmarilloPlatano.jpg" class="lista">
           </td>
             <td class="">
          
@@ -494,7 +494,7 @@
             <%=Amarillo_amarillo_platano_value=Amarillo_amarillo_platano_cos*Amarillo_amarillo_platano %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+        <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -550,7 +550,7 @@
             <%=Moris_and_Cago_value=Moris_and_Cago_cos*Moris_and_Cago %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+        <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -605,7 +605,7 @@
             <%=Stripper_but_chocolate_value=Stripper_but_chocolate_cos*Stripper_but_chocolate %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+      <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -662,7 +662,7 @@
             <% } %>
        
         </td>
-        <td class=""><td class="">
+        <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
@@ -716,8 +716,8 @@
             <%=Enchilada_Verde_value=Enchilada_Verde_cos*Enchilada_Verde %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
-           <input type="button" class="borrar" value="Eliminar" />
+        <td class="">
+          <input type="button" class="borrar" value="Eliminar" />
       </td>
                     </tr>
            <% }   %>
@@ -771,7 +771,7 @@
             <%=Tacos_de_buche_value=Tacos_de_buche_cos*Tacos_de_buche %> </span>
             <% } %>
         </td>
-        <td class=""><td class="">
+       <td class="">
            <input type="button" class="borrar" value="Eliminar" />
       </td>
         </tr>

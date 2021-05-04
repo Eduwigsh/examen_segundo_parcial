@@ -39,10 +39,10 @@ public class iniciarsesion extends HttpServlet {
     private ResultSet rs;
     
     public void init(ServletConfig cfc) throws ServletException{
-    String url="jdbc:mysql://localhost/registro4IV7";
+    String url="jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_164a81f9404682a";
     
-    String userName="root";
-    String password="f0rmajuerrera";
+    String userName="bf098ddf661450";
+    String password="a90cec1d";
     
     try{
         Class.forName("com.mysql.jdbc.Driver");
@@ -93,7 +93,7 @@ public class iniciarsesion extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>"
-                    + "<META HTTP-EQUIV='REFRESH' CONTENT='1;URL=sabores.jsp'>");
+                    + "<META HTTP-EQUIV='REFRESH' CONTENT='1;URL=indexAdministrador.html'>");
             out.println("<title>Servlet iniciarsesion</title>");     
             out.println("</head>");
             out.println("<body>");
