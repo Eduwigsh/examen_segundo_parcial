@@ -93,7 +93,7 @@ public class iniciarsesion extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>"
-                    + "<META HTTP-EQUIV='REFRESH' CONTENT='1;URL=indexAdministrador.html'>");
+                    + "<META HTTP-EQUIV='REFRESH' CONTENT='1;URL=indexAdmin.html'>");
             out.println("<title>Servlet iniciarsesion</title>");     
             out.println("</head>");
             out.println("<body>");

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificar Precio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/indexAdmin.css">
+    <script src="./JS/indexAdministrador.js"></script>
+    <script src="./JS/indexAdForm2.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="indices">
+            <div class="perreo">
+        <nav class="indice1 libro">
+        <h2>Modificar datos</h2>
+        <label>Ingresa el ID del producto para modificar el precio del producto</label>
+        <br>
+        <br>
+        <!--Primer Formulario-->
+        <form method="post" name="formularioModificar" action="adiministrador" onsubmit="return validarForm()">
+            <label class="texto">ID sabor</label>
+            <input type="number" name="id" id="id" class="mamarre" maxlength="30" min="1" max="100"><!--Campos de texto-->
+            <br>
+            <label class="texto">Sabor</label>
+            <input type="text" name="nom_sab" id="nom_sab" class="mamarre" maxlength="30">
+            <br>
+            <label class="texto">Costo:</label>
+            <input type="text" name="cos_sab" class="mamarre" id="cos_sab" maxlength="29"><!--Campos de texto-->
+            <br>
+            <input type="submit" value="Modificar Datos de Registro" class="rebota">
+        </form>
+        </nav>
+        <nav class="indice1 libro">
+        <h2> Agregar Sabor</h2>
+        <label>Ingresa el ID del producto para agregar el producto</label>
+        <br>
+        <br>
+        <!--Segundo Formulario-->
+         <form method="post" name="formularioModificar" action="adiministrador" onsubmit="return validarForm2()">
+            <label class="texto">ID sabor</label>
+            <input type="number" name="id2" id="id2" class="mamarre" maxlength="30" min="1" max="100"><!--Campos de texto-->
+            <br>
+            <label class="texto">Sabor</label>
+            <input type="text" name="nom_sab2" id="nom_sab2" class="mamarre" maxlength="30">
+            <br>
+            <label class="texto">Costo:</label>
+            <input type="text" name="cos_sab2" class="mamarre" id="cos_sab2" maxlength="29"><!--Campos de texto-->
+            <br>
+            <input type="submit" value="Agregar Sabor" class="rebota">
+        </form>
+             </nav>
+            </div>
+        <nav class="indice1 pezuna">
+        <h2> Eliminar</h2>
+        <!--Tercer Formulario-->
+         <form method="post" name="formularioModificar" action="adiministrador">
+            <label class="inferior">ID sabor</label>
+            <input type="number" name="id3" id="id3" class="mamarre"  min="1" max="100" required>
+            <br>
+            <input type="submit" value="Eliminar" class="rebota"><!--Campos de texto-->
+        </form>
+         </nav>
+        <nav class="indice2">
+        <!--Cuarto Formulario-->    
+        <form>
+            <a href="consultar.jsp"> <input type="submit" value="Consultar sabores" class="rebota" id="consulta" >
+        </form>
+       </nav>
+    </div>
+    </div>
+</body>
+</html>

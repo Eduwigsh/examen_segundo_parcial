@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*,java.text.*"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabores</title>
     <link rel="stylesheet" href="CSS/sabores.css">
-    <%
+   <%
        
      Connection con=null;
      Statement set=null;
@@ -36,317 +34,97 @@
     %>
 </head>
 <header>
-    <a href="index.html"><img src="./IMG/LOGOBJ.png" id="logobd"></a><a href="sabores.jsp" ><label class="titulo">Sabores</label></a><a href="acercade.html"><label class="titulo">Acerca de</label></a><a href="iniciarSesion.html"><img id="carrito" src="./IMG/carrito.jpg"></a>
-    </header>
+    <div class="top-container">
+        <a href="index.html">
+            <img src="./IMG/LOGOBJ.png" id="logobd">
+        </a>
+        <a href="sabores.jsp" >
+            <label class="titulo">Sabores</label>
+        </a>
+        <a href="acercade.html">
+            <label class="titulo">Acerca de</label>
+        </a>
+        <a href="iniciarSesion.html">
+            <img id="carrito" src="./IMG/carrito.jpg">
+        </a>
+    </div>
+</header>
 <body>
+    <div class="text-container">
     <nav id="texto"> 
-    Sabores
-    <br>
-    ¿Cómo te gusta tu euforia? Existen tantas maneras de disfrutar Ben & Jerry’s. Nos aseguramos el éxito con un buen chocolate y una vainilla galardonada, pero vamos mucho más lejos, con más de 60 sabores para satisfacer todos los paladares. ¡Vamos, date una vuelta!
-    <br>
-    En Ben and Jerry's tenemos una gran variedad de exqusitos sabores pero pueden cambiar en tienda y en
-    <br> 
-    Sabores en nuestras tiendas de helados
-    <br>
+        <section class="temtom-cont">Sabores</section>
+        <br>
+        <section class="temtom-cont">¿Cómo te gusta tu euforia? Existen tantas maneras de disfrutar Ben & Jerry’s. Nos aseguramos el éxito con un buen chocolate y una vainilla galardonada, pero vamos mucho más lejos, con más de 60 sabores para satisfacer todos los paladares. ¡Vamos, date una vuelta!</section>
+        <br>
+        <section class="temtom-cont">En Ben and Jerry's tenemos una gran variedad de exqusitos sabores pero pueden cambiar en tienda y en sabores en nuestras tiendas de helados</section>
+        <br>
     </nav>
-    <div id="sabores">
-    <table>
-        <form method="post" name="formularioregistro" action="carrito.jsp">
-        <thead>
-            <tr>
-                <td>
-                    Saboress
-                </td>
-                <td>
-                    como se ve
-                </td>
-                <td>
-                    Precio
-                </td>
-                <td>
-                    comprado
-                </td>
-        </thead> 
-        <tr>
-            <td>
-                Kawasaki
-            </td>
-            <td>
-               <img src="./IMG/Kawasaki.jpg" id="KawasakiIMG" style="height: 6rem;
-               width: 6rem;" >
-            <td>
-                 <%q = "select cos_sab from sabores where id_sab=1";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                   <% } %>
-            </td>
-            <td>
+    </div>
+      <form method="post" name="formularioregistro" action="carrito.jsp">
+     <div class="main-container">
+        <div class="general-table">
+        <h1>Sabores</h1>
+        <div class="enviar">
+            <nav class="porsiacaso">
+            <table class="tabla">
+                <thead class="tonto">
+                    <tr class="tabla">
+                        <th class="tabla bob">ID</th>
+                        <th class="tabla bob">sabor</th>
+                        <th class="tabla bob">costo</th>
+                       <th class="tabla bob">cono</th>
+                       <th class="tabla bob">Vaso chico</th>
+                       <th class="tabla bob">Vaso mediano</th>
+                       <th class="tabla bob">Vaso grande</th>
+                    </tr>
+                </thead>
+                <tbody class="tonto">
+ <%    
+                    try{
+              
+                String sabor, costo;
+                int  id;
+                
+                q = "select * from sabores";
+                
+                set = con.createStatement();
+                rs = set.executeQuery(q);
+                while(rs.next()){
+                    id = rs.getInt("id_sab");
+                    sabor = rs.getString("nom_sab");
+                    costo = rs.getString("cos_sab");       
+               %>
+                    <tr class="tabla" >
+                      <td class="tabla bob"><%=id %></td>
+                        <td class="tabla bob"><%=sabor%></td>
+                        <td class="tabla bob"><%=costo%></td>
+                        <td><input type="number"name="<%=sabor%>_cono" min="0" max="30" value="0"></td>
+                        <td><input type="number"name="<%=sabor%>_vaso" min="0" max="30" value="0"></td>
+                        <td><input type="number"name="<%=sabor%>_gordo" min="0" max="30" value="0"></td>
+                        <td><input type="number"name="<%=sabor%>_gordisimo" min="0" max="30" value="0"></td>                     
+                    </tr>
+                   <%     
+                }
+                
+                System.out.println("Consulta exitosa");
+                rs.close();
+                set.close();
             
-                <input type="number"name="Kawasaki" min="00" max="30" value="0" >
-           
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Criko and Crysp
-            </td>
-            <td>
-                <img src="./IMG/Kriko and Krisp.jpg" id="KrikoKrispIMG">
-            </td>
-            <td>
-                <%  q = "select cos_sab from sabores where id_sab=2";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
+            }catch(Exception e){
+                System.out.println("Error al consultar la tabla");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
+            };    
+            %>          
                 
-               
-                    <input type="number"name="Criko_and_Crysp" min="00" max="30" value="0">
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Rey Julion
-            </td>
-            <td>
-                <img src="./IMG/ReyJulion.jpg" id="ReyJulionIMG">
-            </td>
-            <td>
-                <%  q = "select cos_sab from sabores where id_sab=3";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-                
-                    <input type="number" name="Rey_Julion" min="00" max="30" value="0" >
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Panza
-            </td>
-            <td>
-                <img src="./IMG/Panza.jpg"  id="PanzaIMG">
-            </td>
-            <td>
-                                 <%  q = "select cos_sab from sabores where id_sab=4";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-              
-                    <input type="number" name="Panza" min="00" max="30" value="0" >
-                          </td>
-        </tr>
-        <tr>
-            <td>
-                Tamal verde 
-            </td>
-            <td>
-                <img src="./IMG/TamalVerde.jpg" id="TamalVerdeIMG">
-            </td>
-            <td>
-                              <%  q = "select cos_sab from sabores where id_sab=5";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>  $69 x litro
-            </td>
-            <td>
-            
-                    <input type="number" name="Tamal_verde" min="00" max="30" value="0" >
-               
-                  
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Elotes con arta mayonesa y chile del que no pica
-            </td>
-            <td>
-                <img src="./IMG/ElotesConHartaMayonesayChiledelquenoPica.jpg" id="ElotesIMG">
-            </td>
-            <td>
-                               <%  q = "select cos_sab from sabores where id_sab=12";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-              
-                    <input type="number" name="Elotes_con_arta_mayonesa_y_chile_del_que_no_pica"
-                           min="00" max="30" value="0">
-              
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Amarillo amarillo platano
-            </td>
-            <td>
-                <img src="./IMG/AmarilloAmarilloPlatano.jpg" id="AmarilloPlatanoIMG">
-            </td>
-            <td>
-                                <%  q = "select cos_sab from sabores where id_sab=6";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>ro
-            </td>
-            <td>
-            
-                    <input type="number" name="Amarillo_amarillo_platano" min="00" max="30" value="0"  >
-               
-        </tr>
-        <tr>
-            <td>
-                Moris and Cago 
-            </td>
-            <td>
-                <img src="./IMG/Moris&Cago.jpg" id="MorisIMG">
-            </td>
-            <td>
-                                 <%  q = "select cos_sab from sabores where id_sab=7";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-              
-                    <input type="number" name="Moris_and_Cago" min="00" max="30" value="0" >
-              
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Stripper but chocolate 
-            </td>
-            <td>
-                <img src="./IMG/StripperbutChocolate.jpg" id="StripperChocolateIMG">
-            </td>
-            <td>
-                                <%  q = "select cos_sab from sabores where id_sab=8";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-                 
-                    <input type="number" name="Stripper_but_chocolate" min="00" max="30" value="0" >
-             
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Striiper
-            </td>
-            <td>
-                <img src="./IMG/Striiper.jpg" id="StriiperIMG">
-            </td>
-            <td>
-                              <%  q = "select cos_sab from sabores where id_sab=9";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-                       
-                    <input type="number" name="Striiper" min="00" max="30" value="0" >
-              
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Enchilada Verde
-            </td>
-            <td>
-                <img src="./IMG/EnchiladaVerde.jpg" id="EnchiladaVerdeIMG">
-            </td>
-            <td>
-                               <%  q = "select cos_sab from sabores where id_sab=10";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-                 
-                <input type="number" name="Enchilada_Verde" min="00" max="30" value="0" >
-               
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Tacos de buche 
-            </td>
-            <td>
-                <img src="./IMG/TacosdeBuche.jpg" id="TacosBucheIMG">
-            </td>
-            <td>
-                                <%  q = "select cos_sab from sabores where id_sab=11";
-                     
-                            set = con.createStatement();
-                            rs = set.executeQuery(q);
-                            while(rs.next()){%>
-                            <%=Integer.parseInt(rs.getString("cos_sab"))
-                                   %> x litro
-                                    <% } %>
-            </td>
-            <td>
-                      
-                <input type="number" name="Tacos_de_buche" min="00" max="30" value="0"  >
-              
-            </td>
-        </tr>
-    </table>
-        <input  type="submit" name="enviar" id="Enviar" value="Comprar">
-      </form>     
-   </div>
+                </tbody>
+            </table>
+            </div>
+                <div class="enviar">
+                <input  type="submit" name="enviar" id="Enviar" value="Comprar">
+                </div>
+        </div>
+    </div>
+    </form>
+   
 </body>
-
